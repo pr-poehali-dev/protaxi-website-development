@@ -26,7 +26,7 @@ const CARS = [
       Расход: "7.2 л/100км",
       Год: "2023",
     },
-    price: "от 2 500 ₽/сут",
+    price: "от 2 500 ₽/день",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const CARS = [
       Расход: "8.5 л/100км",
       Год: "2022",
     },
-    price: "от 3 200 ₽/сут",
+    price: "от 3 000 ₽/день",
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ const CARS = [
       Расход: "9.1 л/100км",
       Год: "2023",
     },
-    price: "от 5 500 ₽/сут",
+    price: "от 4 000 ₽/день",
   },
 ];
 
@@ -409,10 +409,10 @@ export default function Index() {
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Эконом", from: "от 1 500 ₽/день", icon: "Car", color: "#F5E642" },
-                { label: "Комфорт", from: "от 2 000 ₽/день", icon: "Car", color: "#00D4FF" },
-                { label: "Комфорт+", from: "от 2 800 ₽/день", icon: "Briefcase", color: "#FF6B1A" },
-                { label: "Бизнес", from: "от 4 500 ₽/день", icon: "Star", color: "#9B59B6" },
+                { label: "Эконом", from: "от 1 700 ₽/день", icon: "Car", color: "#F5E642" },
+                { label: "Комфорт", from: "от 2 500 ₽/день", icon: "Car", color: "#00D4FF" },
+                { label: "Комфорт+", from: "от 3 000 ₽/день", icon: "Briefcase", color: "#FF6B1A" },
+                { label: "Бизнес", from: "от 4 000 ₽/день", icon: "Star", color: "#9B59B6" },
               ].map((cat) => (
                 <div
                   key={cat.label}
