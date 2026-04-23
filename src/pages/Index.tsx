@@ -63,49 +63,53 @@ const CARS = [
 ];
 
 const SERVICES = [
-  { icon: "Car", title: "Городское такси", desc: "Быстрые поездки по городу с профессиональными водителями 24/7" },
-  { icon: "MapPin", title: "Трансфер в аэропорт", desc: "Встреча и проводка в аэропорт строго по расписанию" },
-  { icon: "Briefcase", title: "Корпоративные поездки", desc: "Бизнес-такси для сотрудников и деловых встреч" },
-  { icon: "Star", title: "VIP-класс", desc: "Представительские автомобили для особых случаев" },
-  { icon: "Users", title: "Групповые поездки", desc: "Минивэны и автобусы для больших компаний" },
-  { icon: "Clock", title: "Почасовая аренда", desc: "Автомобиль с водителем в полное распоряжение" },
+  { icon: "Car", title: "Аренда авто для работы", desc: "Современные автомобили в аренду под работу в Яндекс Такси — посуточно или понедельно" },
+  { icon: "UserCheck", title: "Подключение к Яндекс Такси", desc: "Быстрое оформление и активация аккаунта водителя в Яндекс Такси под ключ" },
+  { icon: "FileText", title: "Помощь с документами", desc: "Помогаем собрать и подать все необходимые документы для работы в такси" },
+  { icon: "Wrench", title: "Техническое обслуживание", desc: "Регулярное ТО автомобилей из нашего парка включено в стоимость аренды" },
+  { icon: "HeadphonesIcon", title: "Поддержка водителей", desc: "Сопровождаем водителей на всех этапах — от оформления до первых поездок" },
+  { icon: "TrendingUp", title: "Рост заработка", desc: "Помогаем настроить аккаунт и тарифы для максимального дохода с первого дня" },
 ];
 
 const DRIVER_BENEFITS = [
-  { icon: "TrendingUp", val: "до 90%", label: "от стоимости поездки" },
-  { icon: "Zap", val: "24/7", label: "поддержка водителей" },
-  { icon: "Shield", val: "Страховка", label: "на каждую поездку" },
-  { icon: "Smartphone", val: "Приложение", label: "для iOS и Android" },
+  { icon: "Zap", val: "1 день", label: "до выхода на линию" },
+  { icon: "Shield", val: "КАСКО", label: "страховка включена" },
+  { icon: "Wrench", val: "ТО", label: "входит в аренду" },
+  { icon: "Headphones", val: "24/7", label: "поддержка водителей" },
 ];
 
 const FAQS = [
   {
-    q: "Как заказать автомобиль?",
-    a: "Оставьте заявку на сайте, позвоните по телефону или напишите в мессенджер. Наш оператор свяжется с вами в течение 2 минут.",
+    q: "Как арендовать автомобиль для работы в Яндекс Такси?",
+    a: "Оставьте заявку на сайте или позвоните нам. Мы проверим документы и уже на следующий день вы сможете выйти на линию.",
   },
   {
     q: "Какие документы нужны для аренды?",
-    a: "Паспорт гражданина РФ и водительское удостоверение категории B со стажем не менее 2 лет.",
+    a: "Паспорт гражданина РФ и водительское удостоверение категории B со стажем не менее 3 лет.",
   },
   {
-    q: "Есть ли возможность взять автомобиль без водителя?",
-    a: "Да, мы предоставляем автомобили в аренду без водителя. Минимальный срок — 1 сутки.",
+    q: "Входит ли страховка в стоимость аренды?",
+    a: "Да, КАСКО и ОСАГО включены в стоимость аренды. Вы не несёте дополнительных расходов на страховку.",
   },
   {
-    q: "Как стать водителем ProTaxi?",
-    a: "Заполните форму на сайте, пройдите проверку документов и медосмотр. Обучение — бесплатно.",
+    q: "Вы принимаете заказы на такси?",
+    a: "Нет, мы не диспетчерская служба и не принимаем заказы от пассажиров. Наша специализация — аренда автомобилей водителям и подключение к Яндекс Такси.",
   },
   {
-    q: "Работаете ли вы в праздники?",
-    a: "Да, ProTaxi работает 365 дней в году, 24 часа в сутки без выходных и праздников.",
+    q: "Что входит в подключение к Яндекс Такси?",
+    a: "Мы помогаем зарегистрироваться в системе, подать документы, пройти проверку и настроить аккаунт — полностью под ключ.",
+  },
+  {
+    q: "Есть ли минимальный срок аренды?",
+    a: "Минимальный срок аренды — 7 дней. Также доступна помесячная аренда со скидкой.",
   },
 ];
 
 const STATS = [
-  { val: "5 000+", label: "поездок в день" },
-  { val: "1 200+", label: "водителей" },
-  { val: "4.9", label: "рейтинг в сторах" },
+  { val: "500+", label: "водителей в парке" },
   { val: "3 года", label: "на рынке" },
+  { val: "1 день", label: "до выхода на линию" },
+  { val: "100%", label: "легальная работа" },
 ];
 
 export default function Index() {
@@ -163,7 +167,7 @@ export default function Index() {
             onClick={() => scrollTo("#contacts")}
           >
             <Icon name="Phone" size={16} />
-            Заказать
+            Связаться
           </button>
 
           <button
@@ -189,7 +193,7 @@ export default function Index() {
               className="neon-btn mt-2 py-3 rounded-lg font-oswald tracking-wider"
               onClick={() => scrollTo("#contacts")}
             >
-              Заказать такси
+              Оставить заявку
             </button>
           </div>
         )}
@@ -212,33 +216,33 @@ export default function Index() {
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 bg-neon-yellow/10 neon-border rounded-full px-4 py-2">
                 <div className="w-2 h-2 rounded-full bg-neon-yellow animate-pulse" />
-                <span className="text-neon-yellow text-sm font-oswald tracking-widest">ОНЛАЙН • РАБОТАЕМ 24/7</span>
+                <span className="text-neon-yellow text-sm font-oswald tracking-widest">ОФИЦИАЛЬНЫЙ ПАРТНЁР ЯНДЕКС ТАКСИ</span>
               </div>
 
               <h1 className="font-oswald font-bold text-5xl sm:text-6xl lg:text-7xl leading-tight text-white">
-                ТАКСИ НОВОГО
+                АРЕНДА АВТО
                 <br />
-                <span className="neon-text animate-text-glow">ПОКОЛЕНИЯ</span>
+                ДЛЯ <span className="neon-text animate-text-glow">ВОДИТЕЛЕЙ</span>
               </h1>
 
               <p className="text-gray-400 text-lg max-w-lg leading-relaxed">
-                Профессиональные водители, современный автопарк и мгновенная подача — ProTaxi меняет стандарт городских поездок
+                Сдаём автомобили в аренду для работы в Яндекс Такси и подключаем водителей к платформе — быстро, официально, без лишних хлопот
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <button
                   className="neon-btn px-8 py-4 rounded-xl font-oswald text-lg tracking-wider flex items-center gap-2"
-                  onClick={() => scrollTo("#contacts")}
-                >
-                  <Icon name="Zap" size={20} />
-                  Вызвать такси
-                </button>
-                <button
-                  className="orange-btn px-8 py-4 rounded-xl font-oswald text-lg tracking-wider flex items-center gap-2"
                   onClick={() => scrollTo("#rental")}
                 >
                   <Icon name="Key" size={20} />
                   Арендовать авто
+                </button>
+                <button
+                  className="orange-btn px-8 py-4 rounded-xl font-oswald text-lg tracking-wider flex items-center gap-2"
+                  onClick={() => scrollTo("#drivers")}
+                >
+                  <Icon name="UserCheck" size={20} />
+                  Подключиться к Яндекс Такси
                 </button>
               </div>
 
@@ -277,7 +281,7 @@ export default function Index() {
       <div className="bg-neon-yellow/10 border-y border-neon-yellow/20 py-3 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {Array(8)
-            .fill("⚡ ПРОФЕССИОНАЛЬНЫЕ ВОДИТЕЛИ  •  СОВРЕМЕННЫЙ АВТОПАРК  •  ПОДАЧА ЗА 5 МИНУТ  •  РАБОТАЕМ 24/7  ")
+            .fill("⚡ ОФИЦИАЛЬНЫЙ ПАРТНЁР ЯНДЕКС ТАКСИ  •  АРЕНДА АВТО ДЛЯ ВОДИТЕЛЕЙ  •  ПОДКЛЮЧЕНИЕ ЗА 1 ДЕНЬ  •  СТРАХОВКА ВКЛЮЧЕНА  ")
             .map((t, i) => (
               <span key={i} className="font-oswald text-sm text-neon-yellow/70 tracking-widest mx-4">
                 {t}
@@ -294,7 +298,7 @@ export default function Index() {
             ГАЛЕРЕЯ <span className="neon-text">АВТОМОБИЛЕЙ</span>
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Тщательно отобранный парк современных автомобилей в идеальном техническом состоянии
+            Современные автомобили в идеальном техническом состоянии — берите в аренду и сразу выходите на линию
           </p>
         </div>
 
@@ -360,7 +364,7 @@ export default function Index() {
             onClick={() => scrollTo("#contacts")}
           >
             <Icon name="Phone" size={18} />
-            Забронировать выбранный автомобиль
+            Оставить заявку на аренду
           </button>
         </div>
       </section>
@@ -372,21 +376,21 @@ export default function Index() {
             <div>
               <span className="text-neon-yellow/60 font-oswald tracking-[0.3em] text-sm">АРЕНДА</span>
               <h2 className="section-title text-4xl sm:text-5xl text-white mt-3 mb-6">
-                АВТО В АРЕНДУ
+                АРЕНДА ДЛЯ
                 <br />
-                <span className="neon-text">БЕЗ ЛИШНИХ</span>
+                <span className="neon-text">ЯНДЕКС ТАКСИ</span>
                 <br />
-                ХЛОПОТ
+                БЕЗ ХЛОПОТ
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Широкий выбор автомобилей от эконом до бизнес-класса. Прозрачные условия, без скрытых платежей. Страховка включена.
+                Сдаём автомобили водителям для работы в Яндекс Такси. Прозрачные условия, без скрытых платежей. КАСКО и ТО включены в стоимость аренды.
               </p>
               <div className="space-y-4">
                 {[
-                  "Без залога при оплате картой",
-                  "Страховка КАСКО включена",
-                  "Подача в любое место города",
-                  "Аренда от 1 дня",
+                  "КАСКО и ОСАГО включены",
+                  "Техническое обслуживание входит в аренду",
+                  "Выдача авто в день обращения",
+                  "Аренда от 7 дней",
                 ].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <Icon name="CheckCircle" size={20} className="text-neon-yellow flex-shrink-0" />
@@ -399,16 +403,16 @@ export default function Index() {
                 onClick={() => scrollTo("#contacts")}
               >
                 <Icon name="Key" size={18} />
-                Оставить заявку
+                Оставить заявку на аренду
               </button>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Эконом", from: "от 1 500 ₽", icon: "Car", color: "#F5E642" },
-                { label: "Комфорт", from: "от 2 500 ₽", icon: "Car", color: "#00D4FF" },
-                { label: "Бизнес", from: "от 4 000 ₽", icon: "Briefcase", color: "#FF6B1A" },
-                { label: "Минивэн", from: "от 5 500 ₽", icon: "Users", color: "#9B59B6" },
+                { label: "Эконом", from: "от 1 500 ₽/день", icon: "Car", color: "#F5E642" },
+                { label: "Комфорт", from: "от 2 000 ₽/день", icon: "Car", color: "#00D4FF" },
+                { label: "Комфорт+", from: "от 2 800 ₽/день", icon: "Briefcase", color: "#FF6B1A" },
+                { label: "Бизнес", from: "от 4 500 ₽/день", icon: "Star", color: "#9B59B6" },
               ].map((cat) => (
                 <div
                   key={cat.label}
@@ -439,10 +443,10 @@ export default function Index() {
         <div className="text-center mb-16">
           <span className="text-neon-yellow/60 font-oswald tracking-[0.3em] text-sm">ВОДИТЕЛЯМ</span>
           <h2 className="section-title text-4xl sm:text-5xl text-white mt-3">
-            РАБОТАЙ С <span className="neon-text">PROTAXI</span>
+            ПОДКЛЮЧЕНИЕ К <span className="neon-text">ЯНДЕКС ТАКСИ</span>
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Присоединяйся к команде профессионалов и зарабатывай больше с нашими условиями
+            Помогаем водителям быстро и официально начать работу в Яндекс Такси — берём все хлопоты на себя
           </p>
         </div>
 
@@ -464,13 +468,13 @@ export default function Index() {
         <div className="glass-card rounded-3xl p-8 lg:p-12 neon-border">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h3 className="section-title text-3xl text-white mb-8">КАК НАЧАТЬ РАБОТУ</h3>
+              <h3 className="section-title text-3xl text-white mb-8">КАК МЫ ПОДКЛЮЧАЕМ</h3>
               <div className="space-y-6">
                 {[
-                  { n: "01", title: "Оставь заявку", desc: "Заполни форму на сайте или позвони нам" },
-                  { n: "02", title: "Пройди проверку", desc: "Документы и медосмотр — займёт 1 день" },
-                  { n: "03", title: "Обучение", desc: "Бесплатный инструктаж по нашим стандартам" },
-                  { n: "04", title: "Начни зарабатывать", desc: "Первая поездка уже в день подключения" },
+                  { n: "01", title: "Оставь заявку", desc: "Позвони или заполни форму на сайте — ответим сразу" },
+                  { n: "02", title: "Подготовим документы", desc: "Поможем собрать всё необходимое для регистрации в Яндекс Такси" },
+                  { n: "03", title: "Регистрация в системе", desc: "Оформляем аккаунт и настраиваем профиль водителя" },
+                  { n: "04", title: "Выход на линию", desc: "Уже через 1 день получаешь автомобиль и первые заказы" },
                 ].map((step) => (
                   <div key={step.n} className="flex gap-5 items-start">
                     <div className="font-oswald font-bold text-3xl text-neon-yellow/30 w-12 flex-shrink-0">
@@ -485,14 +489,14 @@ export default function Index() {
               </div>
             </div>
             <div className="text-center">
-              <div className="font-oswald font-bold text-6xl text-neon-yellow mb-2">90%</div>
-              <div className="text-gray-400 mb-2">выплата от каждой поездки</div>
-              <div className="text-gray-600 text-sm mb-8">Минимальная комиссия сервиса на рынке</div>
+              <div className="font-oswald font-bold text-6xl text-neon-yellow mb-2">1 день</div>
+              <div className="text-gray-400 mb-2">до первого заказа в Яндекс Такси</div>
+              <div className="text-gray-600 text-sm mb-8">Быстрее чем самостоятельная регистрация</div>
               <button
                 className="neon-btn w-full py-4 rounded-xl font-oswald text-lg tracking-wider"
                 onClick={() => scrollTo("#contacts")}
               >
-                Стать водителем ProTaxi
+                Подключиться к Яндекс Такси
               </button>
             </div>
           </div>
@@ -505,7 +509,7 @@ export default function Index() {
           <div className="text-center mb-16">
             <span className="text-neon-yellow/60 font-oswald tracking-[0.3em] text-sm">ЧТО МЫ ПРЕДЛАГАЕМ</span>
             <h2 className="section-title text-4xl sm:text-5xl text-white mt-3">
-              НАШ СПЕКТР <span className="neon-text">УСЛУГ</span>
+              ЧТО МЫ <span className="neon-text">ПРЕДЛАГАЕМ</span>
             </h2>
           </div>
 
@@ -516,7 +520,7 @@ export default function Index() {
                 className="glass-card rounded-2xl p-7 hover:border-neon-yellow/30 transition-all duration-300 group hover:-translate-y-1"
               >
                 <div className="w-12 h-12 bg-neon-yellow/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-neon-yellow/20 transition-colors">
-                  <Icon name={s.icon as "Car" | "MapPin" | "Briefcase" | "Star" | "Users" | "Clock"} size={24} className="text-neon-yellow" />
+                  <Icon name={s.icon as "Car" | "UserCheck" | "FileText" | "Wrench" | "HeadphonesIcon" | "TrendingUp"} fallback="Star" size={24} className="text-neon-yellow" />
                 </div>
                 <h3 className="font-oswald font-bold text-xl text-white mb-3">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
