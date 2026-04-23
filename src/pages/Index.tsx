@@ -73,8 +73,8 @@ const SERVICES = [
 
 const DRIVER_BENEFITS = [
   { icon: "Zap", val: "1 день", label: "до выхода на линию" },
-  { icon: "Shield", val: "КАСКО", label: "страховка включена" },
   { icon: "Wrench", val: "ТО", label: "входит в аренду" },
+  { icon: "FileText", val: "Под ключ", label: "оформление документов" },
   { icon: "Headphones", val: "24/7", label: "поддержка водителей" },
 ];
 
@@ -383,14 +383,14 @@ export default function Index() {
                 БЕЗ ХЛОПОТ
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Сдаём автомобили водителям для работы в Яндекс Такси. Прозрачные условия, без скрытых платежей. КАСКО и ТО включены в стоимость аренды.
+                Сдаём автомобили водителям для работы в Яндекс Такси. Прозрачные условия, без скрытых платежей.
               </p>
               <div className="space-y-4">
                 {[
-                  "КАСКО и ОСАГО включены",
                   "Техническое обслуживание входит в аренду",
                   "Выдача авто в день обращения",
                   "Аренда от 7 дней",
+                  "Прозрачные условия без скрытых платежей",
                 ].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <Icon name="CheckCircle" size={20} className="text-neon-yellow flex-shrink-0" />
