@@ -20,6 +20,11 @@ const FAQS = [
     a: "Мы помогаем зарегистрироваться в системе, подать документы, пройти проверку и настроить аккаунт — полностью под ключ.",
   },
   {
+    q: "Можно ли подключиться к Яндекс Такси самостоятельно, без менеджера?",
+    a: "Да! Вы можете заполнить анкету водителя напрямую через форму Яндекс Такси — без звонков и ожидания. Выберите наш автопарк в форме, заполните все данные и сразу выходите на линию.",
+    link: { label: "Зарегистрироваться самостоятельно", href: "https://forms.fleet.yandex.ru/forms?ref_id=384b2ff59bc146aaae05962856a649d4" },
+  },
+  {
     q: "Есть ли минимальный срок аренды?",
     a: "Минимальный срок аренды — 7 дней. Также доступна помесячная аренда со скидкой.",
   },
@@ -65,6 +70,17 @@ export default function FaqContacts({ scrollTo }: FaqContactsProps) {
               {openFaq === i && (
                 <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-taxi-border pt-4">
                   {faq.a}
+                  {"link" in faq && faq.link && (
+                    <a
+                      href={faq.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 neon-btn px-5 py-2.5 rounded-lg font-oswald text-sm tracking-wider"
+                    >
+                      <Icon name="ExternalLink" size={16} />
+                      {faq.link.label}
+                    </a>
+                  )}
                 </div>
               )}
             </div>
