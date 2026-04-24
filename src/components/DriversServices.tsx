@@ -155,6 +155,52 @@ export default function DriversServices({ scrollTo }: DriversServicesProps) {
             </div>
           </div>
         </div>
+
+        {/* SELF-REGISTRATION BLOCK */}
+        <div className="mt-10 glass-card rounded-3xl p-8 lg:p-12 border border-neon-yellow/20 bg-neon-yellow/5">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-neon-yellow/10 rounded-full px-4 py-2 mb-6">
+                <Icon name="Zap" size={16} className="text-neon-yellow" />
+                <span className="text-neon-yellow text-sm font-oswald tracking-widest">САМОСТОЯТЕЛЬНОЕ ПОДКЛЮЧЕНИЕ</span>
+              </div>
+              <h3 className="section-title text-3xl text-white mb-4">
+                ЗАРЕГИСТРИРУЙТЕСЬ <span className="neon-text">САМИ</span> — БЕЗ МЕНЕДЖЕРА
+              </h3>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                Не хочешь ждать? Заполни анкету водителя напрямую через форму Яндекс Такси — и сразу выходи на линию через наш парк.
+              </p>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Заполни все данные в форме, выбери наш автопарк — и уже сегодня начнёшь получать заказы. Никаких очередей и ожидания звонка менеджера.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-6">
+              <div className="space-y-3 w-full">
+                {[
+                  "Заполни анкету за 5 минут",
+                  "Выбери наш автопарк в форме",
+                  "Получи одобрение и выходи на линию",
+                ].map((text, i) => (
+                  <div key={text} className="flex items-center gap-3 text-left">
+                    <div className="w-7 h-7 rounded-full bg-neon-yellow/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-neon-yellow font-oswald font-bold text-xs">{i + 1}</span>
+                    </div>
+                    <span className="text-gray-300 text-sm">{text}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://forms.fleet.yandex.ru/forms?ref_id=384b2ff59bc146aaae05962856a649d4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="neon-btn w-full py-4 rounded-xl font-oswald text-lg tracking-wider flex items-center justify-center gap-2"
+              >
+                <Icon name="ExternalLink" size={20} />
+                Зарегистрироваться в Яндекс Такси
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* SERVICES */}
